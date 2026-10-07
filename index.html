@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintetizzatore Modulare Virtuale Vintage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container" class="wooden-chassis">
+        <!-- Barra Superiore / Header Principale -->
+        <header class="top-bar">
+            <div class="brand-badge">
+                <span class="brand-title">MOOG-STYLE</span>
+                <span class="brand-sub">ANALOG SYNTHESIZER MODEL-V</span>
+            </div>
+
+            <div class="header-controls">
+                <button id="btn-start" class="btn btn-primary pulse">START SYNTH</button>
+                
+                <div class="preset-selector">
+                    <label for="preset-select">PRESET:</label>
+                    <select id="preset-select" disabled>
+                        <option value="basic">BASIC SYNTH</option>
+                        <option value="init">INIT PATCH</option>
+                        <option value="lfo-filter">LFO FILTER MOD</option>
+                        <option value="vibrato">VIBRATO</option>
+                    </select>
+                </div>
+
+                <button id="btn-reset" class="btn btn-danger" disabled>RESET PATCH</button>
+            </div>
+        </header>
+
+        <!-- Area Moduli e Cavi SVG -->
+        <main id="rack-viewport" class="rack-viewport">
+            <svg id="cable-canvas" class="cable-canvas"></svg>
+            <div id="modules-rack" class="modules-rack">
+                <!-- I moduli vengono renderizzati dinamicamente da app.js -->
+            </div>
+        </main>
+
+        <!-- Tastiera Virtuale Bottom -->
+        <footer class="keyboard-panel">
+            <div class="keyboard-header">
+                <span class="panel-label">CONTROLLER TASTIERA VIRTUALI &amp; FISICA (A-W-S-E-D-F...)</span>
+                <div class="octave-controls">
+                    <button id="btn-octave-down" class="btn btn-small">- OCT</button>
+                    <span id="octave-display">OTTAVA: 4</span>
+                    <button id="btn-octave-up" class="btn btn-small">+ OCT</button>
+                </div>
+            </div>
+            <div id="virtual-keyboard" class="virtual-keyboard">
+                <!-- Generata dinamicamente in JS per 2 ottave -->
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
