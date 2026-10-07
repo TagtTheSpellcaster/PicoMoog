@@ -76,9 +76,9 @@ body {
 }
 
 .brand-title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: var(--accent-gold);
     text-shadow: 0 0 4px rgba(212, 175, 55, 0.4);
 }
@@ -173,7 +173,7 @@ body {
 .rack-viewport {
     position: relative;
     width: 100%;
-    height: 520px; /* Chassis abbastanza alto per contenere la pancia dei cavi */
+    height: 580px; /* Chassis ulteriormente ingrandito in altezza */
     background: #111;
     border: 3px solid #000;
     border-radius: 4px;
@@ -215,14 +215,14 @@ body {
 .module-panel {
     position: absolute;
     width: 160px;
-    height: 400px; /* Altezza ridotta per lasciare spazio libero in basso ai cavi */
+    height: 360px; /* Pannelli resi più corti */
     background: var(--panel-bg);
     border: 2px solid var(--panel-border);
     box-shadow: 3px 5px 15px rgba(0,0,0,0.7), inset 1px 1px 0 var(--panel-inset);
     border-radius: 2px;
     display: flex;
     flex-direction: column;
-    padding: 16px 8px 8px 8px;
+    padding: 14px 6px 6px 6px;
     box-sizing: border-box;
     cursor: grab;
 }
@@ -242,19 +242,19 @@ body {
     box-shadow: inset 0 1px 1px rgba(255,255,255,0.8), 0 1px 2px rgba(0,0,0,0.5);
 }
 
-.module-panel::before { top: 6px; left: 8px; }
-.module-panel::after { top: 6px; right: 8px; }
+.module-panel::before { top: 4px; left: 6px; }
+.module-panel::after { top: 4px; right: 6px; }
 
 .module-header {
     text-align: center;
     border-bottom: 2px solid #333;
     padding-bottom: 2px;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     pointer-events: none;
 }
 
 .module-title {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 900;
     letter-spacing: 1px;
     color: #111;
@@ -263,7 +263,7 @@ body {
 .module-content {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
     flex-grow: 1;
     justify-content: space-between;
 }
@@ -312,8 +312,8 @@ body {
    ========================================================================== */
 .knob-container {
     position: relative;
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     cursor: ns-resize;
 }
 
@@ -323,7 +323,7 @@ body {
     border-radius: 50%;
     background: var(--knob-bg);
     border: 2px solid #555;
-    box-shadow: 0 3px 5px rgba(0,0,0,0.6), inset 0 1px 2px rgba(255,255,255,0.3);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.6), inset 0 1px 2px rgba(255,255,255,0.3);
     position: relative;
     transform: rotate(-135deg);
 }
@@ -331,11 +331,11 @@ body {
 .knob-body::after {
     content: '';
     position: absolute;
-    top: 3px;
+    top: 2px;
     left: 50%;
     transform: translateX(-50%);
     width: 2px;
-    height: 8px;
+    height: 7px;
     background: #fff;
     border-radius: 2px;
     box-shadow: 0 0 2px rgba(0,0,0,0.8);
@@ -349,7 +349,7 @@ body {
     justify-content: space-around;
     width: 100%;
     border-top: 1px solid #888;
-    padding-top: 4px;
+    padding-top: 3px;
     margin-top: 1px;
 }
 
@@ -361,8 +361,8 @@ body {
 }
 
 .jack {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     background: var(--jack-metal);
     border: 2px solid #222;
@@ -375,8 +375,8 @@ body {
 }
 
 .jack-hole {
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: #000;
     box-shadow: inset 0 1px 3px rgba(0,0,0,1);
@@ -385,8 +385,8 @@ body {
 .jack.connected::after {
     content: '';
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 11px;
+    height: 11px;
     border-radius: 50%;
     background: #333;
     border: 1px solid #111;
@@ -401,8 +401,8 @@ body {
 
 /* Indicatore LED */
 .led-indicator {
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: var(--led-off);
     border: 1px solid #111;
