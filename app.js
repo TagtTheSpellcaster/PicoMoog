@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.element = null;
         }
 
-        renderBase(width = 180) {
+        renderBase(width = 160) {
             const panel = document.createElement('div');
             panel.className = 'module-panel';
             panel.id = `module-${this.id}`;
@@ -889,7 +889,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const dx = moveEv.clientX - startX;
                 const dy = moveEv.clientY - startY;
 
-                const newX = Math.max(0, Math.min(1080, initialModuleX + dx));
+                const newX = Math.max(0, Math.min(1090, initialModuleX + dx));
                 const newY = Math.max(0, Math.min(30, initialModuleY + dy));
 
                 module.x = newX;
@@ -1061,14 +1061,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const container = document.getElementById('modules-rack');
         container.innerHTML = '';
 
-        // Posizionamento Layout Moduli nello Chassis
-        state.modules['vco1'] = new VCOModule('vco1', 20, 15);
-        state.modules['vcf1'] = new VCFModule('vcf1', 220, 15);
-        state.modules['vca1'] = new VCAModule('vca1', 420, 15);
-        state.modules['adsr1'] = new ADSRModule('adsr1', 620, 15);
-        state.modules['lfo1'] = new LFOModule('lfo1', 820, 15);
-        state.modules['out1'] = new MasterOutputModule('out1', 1020, 15);
-        state.modules['kbd1'] = new KeyboardControllerModule('kbd1', 20, 300);
+        // Posizionamento Layout Moduli nello Chassis (passo 170px per moduli larghezza 160px)
+        state.modules['vco1'] = new VCOModule('vco1', 15, 15);
+        state.modules['vcf1'] = new VCFModule('vcf1', 185, 15);
+        state.modules['vca1'] = new VCAModule('vca1', 355, 15);
+        state.modules['adsr1'] = new ADSRModule('adsr1', 525, 15);
+        state.modules['lfo1'] = new LFOModule('lfo1', 695, 15);
+        state.modules['out1'] = new MasterOutputModule('out1', 865, 15);
+        state.modules['kbd1'] = new KeyboardControllerModule('kbd1', 1035, 15);
 
         Object.values(state.modules).forEach(m => {
             container.appendChild(m.element);
