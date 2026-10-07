@@ -890,7 +890,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const dy = moveEv.clientY - startY;
 
                 const newX = Math.max(0, Math.min(1090, initialModuleX + dx));
-                const newY = Math.max(0, Math.min(30, initialModuleY + dy));
+                const newY = Math.max(0, Math.min(180, initialModuleY + dy));
 
                 module.x = newX;
                 module.y = newY;
